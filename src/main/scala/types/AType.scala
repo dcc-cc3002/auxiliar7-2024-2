@@ -15,4 +15,6 @@ abstract class AType(val name: String) extends Type {
   def effectFire(): Double = BASIC
   def effectWater(): Double = BASIC
   def effectGrass(): Double = BASIC
+
+  override def toString(): String = name
 }

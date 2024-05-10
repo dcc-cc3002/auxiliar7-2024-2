@@ -10,5 +10,11 @@ class Fire extends AType("Fire") {
   }
 
   override def bonusFire(): Double = BOOST
-  override def bonusWater(): Double = SUPEREFFECTIVE
+  override def effectWater(): Double = SUPEREFFECTIVE
+  override def effectGrass(): Double = INEFFECTIVE
+
+  override def equals(other: Any): Boolean = other match {
+    case f: Fire => true
+    case _ => false
+  }
 }
