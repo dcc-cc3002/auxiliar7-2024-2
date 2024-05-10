@@ -1,14 +1,9 @@
 package types
 
-class Fire extends AType("Fire") {
-  def bonus(other: Type): Double = {
-    other.bonusFire()
+class Fire extends Type {
+  val name: String = "Fire"
+  override def equals(other: Any): Boolean = other match {
+    case f: Fire => true
+    case _ => false
   }
-
-  def effect(other: Type): Double = {
-    other.effectFire()
-  }
-
-  override def bonusFire(): Double = BOOST
-  override def bonusWater(): Double = SUPEREFFECTIVE
 }
