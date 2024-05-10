@@ -22,12 +22,16 @@ del ataque en base al tipo del movimiento y del atacante (1.0 o 1.5)
 
 ## P2: Tabla de tipos
 
-La mecánica principal del juego son los tipos elementales y sus interacciones. Fijése en la siguiente tabla
+La mecánica principal del juego son los tipos elementales y sus interacciones. Fíjese en la siguiente tabla
 que muestra dicha relación:
 
-*TABLA*
+| Movimiento | vs. Agua | vs. Fuego | vs. Planta |
+| - | :-: | :-: | :-: |
+| Agua | E | S | I |
+| Fuego | I  | E | S |
+| Planta | S | I | E |
 
-Donde SE es superefectivo, E es efectivo y I es ineficaz.
+Donde S es superefectivo, E es efectivo y I es ineficaz.
 
 Cree un método que permite obtener el *multiplicador de daño* del ataque en base al tipo del movimiento y el del objetivo (2.0, 1.0 o 0.5).
 
