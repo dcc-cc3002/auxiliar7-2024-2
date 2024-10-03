@@ -1,5 +1,6 @@
 package creatures
 
+import excepcions.NotLearnMovement
 import types.*
 import movements.*
 
@@ -50,7 +51,7 @@ class CreatureTest extends munit.FunSuite {
     assertEquals(lastHp - rl.hp, 120.0)
 
     lastHp = mk.hp
-    fc.attack(new WaterGun(), mk)
+    fc.attack(new Tackle(), mk)
     // 40 (power) * 1.0 (bonus) * 1.0 (effect)
     // = 40
     assertEquals(lastHp - mk.hp, 40.0)
@@ -77,6 +78,12 @@ class CreatureTest extends munit.FunSuite {
     val lastHp = fc.maxHp
     fc.damage(40)
     assertEquals(fc.maxHp, lastHp)
+  }
+
+  test("A creature should not use a Movement that doesn't know") {
+    intercept[NotLearnMovement]({
+      fc.attack(new WaterGun(), rl)
+    })
   }
 }
 

@@ -1,11 +1,12 @@
 package movements
 
-import types.Fire
+import types.Normal
 
-class Ember extends AMovement("Ember", 40, new Fire()) {
 
+class Round extends AMovement("Round", 60, new Normal()) {
   override def equals(other: Any): Boolean = other match {
-    case e: Ember => true
+    case e: Round => true
     case _ => false
   }
+
 }

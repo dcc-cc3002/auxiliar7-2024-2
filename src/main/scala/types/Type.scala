@@ -10,9 +10,11 @@ trait Type {
   def bonusGrass(): Double
   def bonusFire(): Double
   def bonusWater(): Double
+  def bonusNormal(): Double
 
 
   def effectGrass(): Double
   def effectFire(): Double
   def effectWater(): Double
+  def effectNormal(): Double
 }

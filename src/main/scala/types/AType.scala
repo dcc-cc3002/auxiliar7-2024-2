@@ -11,10 +11,12 @@ abstract class AType(val name: String) extends Type {
   def bonusFire(): Double = BASIC
   def bonusWater(): Double = BASIC
   def bonusGrass(): Double = BASIC
+  def bonusNormal(): Double = BASIC
 
   def effectFire(): Double = BASIC
   def effectWater(): Double = BASIC
   def effectGrass(): Double = BASIC
+  def effectNormal(): Double = BASIC
 
   override def toString(): String = name
 }
